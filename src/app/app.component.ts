@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { RouterOutlet } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CommonModule } from '@angular/common';
 
 interface Track {
   name: string;
   url: SafeResourceUrl;
+}
+
+interface Tab {
+  name: string;
+  tracks: Track[];
 }
 
 @Component({
@@ -22,6 +25,9 @@ interface Track {
 })
 export class AppComponent {
   title = 'Mood board';
+
+  tabs: Tab[];
+
   combat: Track[];
   nature: Track[];
   city: Track[];
@@ -30,6 +36,7 @@ export class AppComponent {
   mood: Track[];
 
   constructor(public sanitizer: DomSanitizer) {
+    // Initialize tracklists
     this.combat = [
       { name: 'Witcher 3', url: this.sanitizeUrl('NHBUVLpjAmA?si=scgXcbN0neYoqyxE') },
       { name: 'Nosk', url: this.sanitizeUrl('Z1vJSNd3ESA?si=ELqo27M-9_MyegfX') },
@@ -78,6 +85,16 @@ export class AppComponent {
       { name: 'Last goodbye', url: this.sanitizeUrl('mFsQpCjRyvY?si=CSO1o9362BHbHrtz') }, 
       { name: 'On the Nature of Daylight', url: this.sanitizeUrl('u_d23K_-v1Q?si=ef26XY1Yz83MUNss') }, 
     ]
+
+    // Initialize tabs
+    this.tabs = [
+      { name: 'Combat', tracks: this.combat },
+      { name: 'Nature', tracks: this.nature },
+      { name: 'City', tracks: this.city },
+      { name: 'Dungeon', tracks: this.dungeon },
+      { name: 'Mystery', tracks: this.mystery },
+      { name: 'Mood', tracks: this.mood },
+    ];
   }
 
   sanitizeUrl(url: string): SafeResourceUrl {

@@ -1,42 +1,17 @@
 <div >
     <mat-tab-group>
         
-        <mat-tab label="Combat">
+        <mat-tab *ngFor="let tab of tabs" [label]="tab.name">
             <div class="tab-content">
-                <div *ngFor="let track of combat" class="video-container">
-                    <iframe class="video" [src]="track.url" title="{{track.name}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-            </div>
-        </mat-tab>
-        
-        <mat-tab label="Nature">
-            <div class="tab-content">
-                <div *ngFor="let track of nature" class="video-container">
-                    <iframe class="video" [src]="track.url" title="{{track.name}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-            </div>
-        </mat-tab>
-        
-        <mat-tab label="City">
-            <div class="tab-content">
-                <div *ngFor="let track of city" class="video-container">
-                    <iframe class="video" [src]="track.url" title="{{track.name}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-            </div>
-        </mat-tab>
-        
-        <mat-tab label="Mystery">
-            <div class="tab-content">
-                <div *ngFor="let track of mystery" class="video-container">
-                    <iframe class="video" [src]="track.url" title="{{track.name}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-            </div>
-        </mat-tab>
-        
-        <mat-tab label="Mood">
-            <div class="tab-content">
-                <div *ngFor="let track of mood" class="video-container">
-                    <iframe class="video" [src]="track.url" title="{{track.name}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <div *ngFor="let track of tab.tracks" class="video-container">
+                    <iframe 
+                        class="video" 
+                        [src]="track.url" 
+                        title="{{track.name}}" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
                 </div>
             </div>
         </mat-tab>
