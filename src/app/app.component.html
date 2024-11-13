@@ -3,67 +3,41 @@
         
         <mat-tab label="Combat">
             <div class="tab-content">
-                <iframe class="video" src="https://www.youtube.com/embed/NHBUVLpjAmA?si=QJLyZpcNsTkw5nrv&amp;controls=1" title="Witcher 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/Z1vJSNd3ESA?si=Jej5JSbUOgT9kIGD&amp;controls=1" title="Nosk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/jFGq3nwApvA?si=ofbvIK1UehNycFAl&amp;controls=1" title="That one really good goblin fight theme" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/cw9zaG4_mdw?si=DmywyYayswRTmgP_&amp;controls=1" title="Cunning cruel crits" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/HJtQo9nCt80?si=5k7f95_fguVzkznk&amp;controls=1" title="Ganondorf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div *ngFor="let track of combat" class="video-container">
+                    <iframe class="video" [src]="track.url" title="{{track.name}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
             </div>
         </mat-tab>
-            
-        <mat-tab label="Nature [ambience]">
+        
+        <mat-tab label="Nature">
             <div class="tab-content">
-                <iframe class="video" src="https://www.youtube.com/embed/gVKEM4K8J8A?si=0lJ3VI2Egf12HM51&amp;controls=1" title="Thunderstorm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/oy0jX_I1CIU?si=eu03ixDelSYwyB31&amp;controls=1" title="Windy hilltopp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/xNN7iTA57jM?si=XvpxCGnObNdvttv6&amp;controls=1" title="Forest" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/tRXiKBpiN7E?si=xdLo2DPobnTTwQqB&amp;controls=1" title="Highest peak" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div *ngFor="let track of nature" class="video-container">
+                    <iframe class="video" [src]="track.url" title="{{track.name}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
             </div>
         </mat-tab>
-            
-        <mat-tab label="Nature [music]">
+        
+        <mat-tab label="City">
             <div class="tab-content">
-                <iframe class="video" src="https://www.youtube.com/embed/46w8MRZKj64?si=cGJ5leA-G4n7PoTF&amp;controls=1" title="Desert ruins" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/qD2ahwiPRBk?si=yQobx29GFp-ozMuB&amp;controls=1" title="Arctic wilderness" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/XxEhuSJF780?si=dnpFwcDx4ul6k-7P&amp;controls=1" title="Enchanted forest" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/ZWxlwLYCBsE?si=qP__k_LhoeP91-Ch&amp;controls=1" title="Coast" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/hBkcwy-iWt8?si=G-JhRFgPdnRfClkx&amp;controls=1" title="Skyrim day" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div *ngFor="let track of city" class="video-container">
+                    <iframe class="video" [src]="track.url" title="{{track.name}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
             </div>
         </mat-tab>
-            
-        <mat-tab label="City [ambience]">
-            <div class="tab-content">
-                <iframe class="video" src="https://www.youtube.com/embed/x2UulCWGess?si=gXg1swQmgUsY-LNM&amp;controls=1" title="Small marketplace" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/_52K0E_gNY0?si=IrKxDAnny9HB7poJ&amp;controls=1" title="Medieval city" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/plUgICpVAoc?si=RveMFYNrst1MZSrB&amp;controls=1" title="Arena" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/bSbYpFMNxLI?si=-sOFQ1csIdzUB-Gp&amp;controls=1" title="Evening town" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/3sL0omwElxw?si=wPGYqmaHrPkjmbFj&amp;controls=1" title="Rain outside" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </mat-tab>
-            
-        <mat-tab label="City [music]">
-            <div class="tab-content">
-                <iframe class="video" src="https://www.youtube.com/embed/Y4KX-owEk98?si=-Ybqdu-iqgUCRxKm&amp;controls=1" title="Skyrim towns" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/_RsnVOK6Fdg?si=8fnnUOQhoEQywPu-&amp;controls=1" title="City of Theives" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/9s-ZyewKzrs?si=Xjw9Ag7GHfFK_wIw&amp;controls=1" title="The capital" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/Oeo2VCCtUZQ?si=BeWndESgN3Uk-yOi&amp;controls=1" title="Alliance taverns" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/JILsZeof8m4?si=zNuY-Dno3HSeWm6e&amp;controls=1" title="Skyloft" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </mat-tab>
-            
+        
         <mat-tab label="Mystery">
             <div class="tab-content">
-                <iframe class="video" src="https://www.youtube.com/embed/EApZmmYg_oQ?si=ygouDp2vlQEc3ccG&amp;controls=1" title="Suspense" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/fv_7EurNAss?si=kPIx7UmS3NzFuPCI&amp;controls=1" title="Tense path" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/7wBzL62Va1k?si=KyQRsYxIF1NyoVig&amp;controls=1" title="Investigation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/F7k5rqeU6t8?si=_Mll5NFQa_9g8CoD&amp;controls=1" title="Mage's tower" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/Nd0beTmpfVA?si=b7cKcGrg_JauNEB0&amp;controls=1" title="Enchanted library" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/yo0zzQm70Jg?si=R7VhSK9D5qBGKNYY&amp;controls=1" title="City of Tears" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div *ngFor="let track of mystery" class="video-container">
+                    <iframe class="video" [src]="track.url" title="{{track.name}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
             </div>
         </mat-tab>
-
+        
         <mat-tab label="Mood">
             <div class="tab-content">
-                <iframe class="video" src="https://www.youtube.com/embed/4xe6oOmidwI?si=rxYwr01SU6UemqOW&amp;controls=1" title="Aftermath" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div *ngFor="let track of mood" class="video-container">
+                    <iframe class="video" [src]="track.url" title="{{track.name}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
             </div>
         </mat-tab>
 
