@@ -1,12 +1,12 @@
 <div >
     <mat-tab-group>
         
-        <mat-tab *ngFor="let tab of tabs" [label]="tab.name">
+        <mat-tab *ngFor="let tab of tabs" [label]="tab.title">
             <div class="tab-content">
-                <div *ngFor="let track of tab.tracks" class="video-container">
+                <div *ngFor="let track of tab.trackList" class="video-container">
                     <iframe 
                         class="video" 
-                        [src]="track.url" 
+                        [src]="track.id" 
                         title="{{track.name}}" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
