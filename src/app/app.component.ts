@@ -43,6 +43,7 @@ export class AppComponent {
       { name: 'Goblin fight theme', id: this.sanitizeUrl('jFGq3nwApvA') },
       { name: 'Cunning cruel crits', id: this.sanitizeUrl('cw9zaG4_mdw') },
       { name: 'Ganondorf', id: this.sanitizeUrl('HJtQo9nCt80') },
+      { name: 'Dung Defender', id: this.sanitizeUrl('GqujoojwSBU') },
     ];
     this.nature = [
       { name: 'Thunderstorm', id: this.sanitizeUrl('gVKEM4K8J8A') },
@@ -54,6 +55,9 @@ export class AppComponent {
       { name: 'Enchanted forest', id: this.sanitizeUrl('XxEhuSJF780') },
       { name: 'Coast', id: this.sanitizeUrl('ZWxlwLYCBsE') },
       { name: 'Skyrim day', id: this.sanitizeUrl('hBkcwy-iWt8') },
+      { name: 'Forest Temple', id: this.sanitizeUrl('zeglbFCkoaE') },
+      { name: 'Greenpath', id: this.sanitizeUrl('eg0YL3UZGuA') },
+      { name: "Queen's Garden", id: this.sanitizeUrl('fFbvV3auWAc') },
     ]
     this.city = [
       { name: 'Small marketplace', id: this.sanitizeUrl('x2UulCWGess') },
@@ -66,6 +70,7 @@ export class AppComponent {
       { name: 'The capital', id: this.sanitizeUrl('9s-ZyewKzrs') },
       { name: 'Alliance taverns', id: this.sanitizeUrl('Oeo2VCCtUZQ') },
       { name: 'Skyloft', id: this.sanitizeUrl('JILsZeof8m4') },
+      { name: 'Hearthstone', id: this.sanitizeUrl('psvFoGMtcFQ') },
     ]
     this.dungeon = [
       { name: 'Bellow', id: this.sanitizeUrl('UXCxnelWrkA') },
